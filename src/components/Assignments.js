@@ -20,9 +20,7 @@ function Assignments() {
       headers: {
         authorization: localStorage.getItem("token")
       }
-    })
-    .then(() => alert("✅ Assigned Successfully"))
-    .catch(err => {
+    }).then(() => alert("✅ Assigned Successfully")).catch(err => {
       console.log(err);
       alert("❌ Assignment Failed");
     });

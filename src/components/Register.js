@@ -19,12 +19,10 @@ function Register() {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    axios.post('https://military-backend-qoa1.onrender.com/api/auth/register', data)
-      .then(() => {
+    axios.post('https://military-backend-qoa1.onrender.com/api/auth/register', data).then(() => {
         alert("✅ Registered Successfully");
         navigate("/login");
-      })
-      .catch(err => {
+      }).catch(err => {
         console.log(err);
         alert("❌ Registration Failed");
       });

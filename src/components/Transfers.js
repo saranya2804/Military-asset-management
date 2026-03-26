@@ -20,9 +20,7 @@ function Transfers() {
       headers: {
         authorization: localStorage.getItem("token")
       }
-    })
-    .then(() => alert("✅ Transfer Successful"))
-    .catch(err => {
+    }).then(() => alert("✅ Transfer Successful")).catch(err => {
       console.log(err);
       alert("❌ Transfer Failed");
     });
