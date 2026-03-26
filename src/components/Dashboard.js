@@ -20,12 +20,10 @@ function Dashboard() {
       headers: {
         authorization: localStorage.getItem("token")
       }
-    })
-      .then(res => {
+    }).then(res => {
         setAssets(res.data);
         setLoading(false);
-      })
-      .catch(() => setLoading(false));
+      }).catch(() => setLoading(false));
   }, []);
 
   // Filter logic

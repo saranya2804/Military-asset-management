@@ -15,16 +15,17 @@ function Purchases() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-axios.post('https://military-backend-qoa1.onrender.com/api/purchases', data, {
-  headers: {
-    authorization: localStorage.getItem("token")
-  }
-}).then(() => {
-        alert("✅ Asset Added Successfully");
-        setData({ assetName: '', type: '', quantity: '', base: '' });
-      })
-      .catch(err => console.log(err));
+axios
+  .post('https://military-backend-qoa1.onrender.com/api/purchases', data, {
+    headers: {
+      authorization: localStorage.getItem("token")
+    }
+  })
+  .then(() => {
+    alert("✅ Asset Added Successfully");
+    setData({ assetName: '', type: '', quantity: '', base: '' });
+  })
+  .catch(err => console.log(err));
   };
 
   return (

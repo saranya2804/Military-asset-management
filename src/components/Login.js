@@ -13,14 +13,12 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    axios.post('https://military-backend-qoa1.onrender.com/api/auth/login', data)
-      .then(res => {
+    axios.post('https://military-backend-qoa1.onrender.com/api/auth/login', data).then(res => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("role", res.data.role);
         alert("✅ Login Successful");
         navigate("/dashboard"); // redirect
-      })
-      .catch(err => {
+      }).catch(err => {
         console.log(err);
         alert("❌ Invalid Credentials");
       });
