@@ -13,7 +13,7 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:5000/api/auth/login', data)
+    axios.post('https://military-backend-qoa1.onrender.com/api/auth/login', data)
       .then(res => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("role", res.data.role);
