@@ -16,7 +16,7 @@ function Dashboard() {
 
   // Fetch assets
   useEffect(() => {
-    axios.get('http://localhost:5000/api/purchases', {
+    axios.get('https://military-backend-qoa1.onrender.com/api/purchases', {
       headers: {
         authorization: localStorage.getItem("token")
       }

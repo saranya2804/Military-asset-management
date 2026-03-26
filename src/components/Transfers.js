@@ -16,7 +16,7 @@ function Transfers() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:5000/api/transfers', data, {
+    axios.post('https://military-backend-qoa1.onrender.com/api/transfers', data, {
       headers: {
         authorization: localStorage.getItem("token")
       }

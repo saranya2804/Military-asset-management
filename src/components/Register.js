@@ -19,7 +19,7 @@ function Register() {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:5000/api/auth/register', data)
+    axios.post('https://military-backend-qoa1.onrender.com/api/auth/register', data)
       .then(() => {
         alert("✅ Registered Successfully");
         navigate("/login");

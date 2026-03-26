@@ -16,11 +16,11 @@ function Purchases() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-axios.post('http://localhost:5000/api/purchases', data, {
+axios.post('https://military-backend-qoa1.onrender.com/api/purchases', data, {
   headers: {
     authorization: localStorage.getItem("token")
   }
-})      .then(() => {
+}).then(() => {
         alert("✅ Asset Added Successfully");
         setData({ assetName: '', type: '', quantity: '', base: '' });
       })

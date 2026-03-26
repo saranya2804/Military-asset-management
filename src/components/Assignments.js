@@ -16,7 +16,7 @@ function Assignments() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:5000/api/assignments', data, {
+    axios.post('https://military-backend-qoa1.onrender.com/api/assignments', data, {
       headers: {
         authorization: localStorage.getItem("token")
       }
