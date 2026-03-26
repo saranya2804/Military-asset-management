@@ -15,7 +15,7 @@ function Purchases() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-axios
+    axios
   .post('https://military-backend-qoa1.onrender.com/api/purchases', data, {
     headers: {
       authorization: localStorage.getItem("token")
